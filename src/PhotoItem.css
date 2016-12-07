@@ -1,0 +1,11 @@
+.PhotoItem {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.PhotoItem-image {
+  display: block;
+  width: 100px;
+}
