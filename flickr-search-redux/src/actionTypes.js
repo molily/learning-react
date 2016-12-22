@@ -1,0 +1,3 @@
+export const SEARCH = 'SEARCH';
+export const SEARCH_RESULTS_LOADED = 'SEARCH_RESULTS_LOADED';
+export const PHOTO_FOCUSSED = 'PHOTO_FOCUSSED';

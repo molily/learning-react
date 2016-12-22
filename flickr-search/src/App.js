@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
-import $ from 'jquery';
+import jsonp from 'jsonp';
 import Searchbox from './Searchbox';
 import PhotoList from './PhotoList';
 import FullPhoto from './FullPhoto';
 import './App.css';
 
-class App extends PureComponent {
+export default class App extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -19,17 +19,13 @@ class App extends PureComponent {
   }
 
   onSearch(searchTerm) {
-    $.ajax({
-      url: 'http://api.flickr.com/services/feeds/' +
-      'photos_public.gne?jsoncallback=?',
-      dataType: 'json',
-      data: {
-        tags: searchTerm,
-        tagmode: 'all',
-        format: 'json'
-      }
-    }).then((data) => {
+    // Make the JSONP request to Flickr
+    const encodedSearchTerm = encodeURIComponent(searchTerm);
+    const url = `http://api.flickr.com/services/feeds/photos_public.gne?tags=${encodedSearchTerm}&tagmode=all&format=json`;
+    jsonp(url, { param: 'jsoncallback' }, (err, data) => {
+      if (err) return;
       this.setState({
+        searchTerm,
         photos: data.items,
         currentPhoto: null
       });
@@ -41,21 +37,25 @@ class App extends PureComponent {
   }
 
   render() {
-    const { photos, currentPhoto } = this.state;
+    const { searchTerm, photos, currentPhoto } = this.state;
+
+    const photoList = photos.length > 0 &&
+      <PhotoList searchTerm={searchTerm} photos={photos}
+        onFocusPhoto={this.onFocusPhoto} />;
+    const fullPhoto = currentPhoto && <FullPhoto photo={currentPhoto} />;
+
     return (
       <main className="App">
         <header className="App-searchbox">
           <Searchbox onSearch={this.onSearch} />
         </header>
         <section className="App-photolist">
-          <PhotoList photos={photos} onFocusPhoto={this.onFocusPhoto} />
+          {photoList}
         </section>
         <section className="App-fullphoto">
-          {currentPhoto && <FullPhoto photo={currentPhoto} />}
+          {fullPhoto}
         </section>
       </main>
     );
   }
 }
-
-export default App;

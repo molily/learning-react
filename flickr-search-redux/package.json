@@ -1,14 +1,17 @@
 {
-  "name": "hello-world",
+  "name": "flickr-search-redux",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.8.1"
   },
   "dependencies": {
-    "jquery": "^3.1.1",
+    "jsonp": "^0.2.1",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -15,9 +15,10 @@ export default class Searchbox extends PureComponent {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <h1>Flickr-Suche</h1>
+        <h1>Flickr Search</h1>
         <p>
-          <input ref='searchField' type='text' />
+          <input ref='searchField' type='text' defaultValue='Flower' />
+          {' '}
           <button>Submit</button>
         </p>
       </form>

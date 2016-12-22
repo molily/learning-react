@@ -1,4 +1,4 @@
-# Flickr Search in React
+# Flickr Search with React
 
 Before writing any code, we should plan how to structure our app.
 
@@ -51,25 +51,26 @@ Before writing any code, we should plan how to structure our app.
   - props:
     - *no props*
   - state:
-    - searchTerm : String
-    - photos : Array<Object>
-    - currentPhoto : Object
+    - searchTerm: String
+    - photos: Array<Object>
+    - currentPhoto: Object
 
 - Searchbox
   - Behavior:
     - Renders a search form with a text input field and a submit button.
     - When the form is submitted, Searchbox calls `onSearch` passing the search term.
   - props:
-    - onSearch : Function
+    - onSearch: Function
   - state:
     - *no state*
 
 - PhotoList
   - Behavior:
-    - Renders a list of PhotoItem components.
+    - Renders the search results as a list of PhotoItem components.
   - props:
+    - searchTerm: String
     - photos: Array<Object>
-    - onFocusPhoto : Function
+    - onFocusPhoto: Function
   - state:
     - *no state*
 
@@ -79,7 +80,7 @@ Before writing any code, we should plan how to structure our app.
     - If the user clicks on a photo in the results, PhotoList calls `onFocusPhoto` passing the photo object.
   - props:
     - photos: Array<Object>
-    - onFocusPhoto : Function
+    - onFocusPhoto: Function
   - state:
     - *no state*
 
@@ -87,13 +88,13 @@ Before writing any code, we should plan how to structure our app.
   - Behavior:
     - Renders a photo, its metadata and links to the original Flickr page.
   - props:
-    - photo : Object
+    - photo: Object
   - state:
     - *no state*
 
 ## Possible data changes
 
-- onSearch > SEARCH_TERM_ENTERED
+- onSearch > SEARCH
 - Flickr search callback > SEARCH_RESULTS_LOADED
 - onFocusPhoto > PHOTO_FOCUSSED
 

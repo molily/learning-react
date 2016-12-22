@@ -16,9 +16,10 @@ export default class PhotoItem extends PureComponent {
   render() {
     const { photo } = this.props;
     return (
-      <li className='PhotoItem' onClick={this.onFocusPhoto}>
-        <a href=''>
-          <img src={photo.media.m} className='PhotoItem-image'/>
+      <li className='PhotoItem'>
+        <a href='' onClick={this.onFocusPhoto}>
+          <img src={photo.media.m} alt={photo.title}
+            className='PhotoItem-image'/>
         </a>
       </li>
     );
