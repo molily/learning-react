@@ -18,7 +18,7 @@ Before writing any code, we should plan how to structure our app.
 ## Application data
 
 - searchTerm: String (may be empty, i.e. `''`)
-- photos: Array<Object> (may be empty, i.e. `[]`)
+- photos: Array&lt;Object> (may be empty, i.e. `[]`)
 - currentPhoto: Object (may be empty, i.e. `null`)
 
 ## Possible application states
@@ -45,60 +45,65 @@ Before writing any code, we should plan how to structure our app.
 
 ## Component definitions
 
-- App
-  - Behavior:
-    - Topmost component that holds all state and renders the main components
-  - props:
-    - *no props*
-  - state:
-    - searchTerm: String
-    - photos: Array<Object>
-    - currentPhoto: Object
+### App
 
-- Searchbox
-  - Behavior:
-    - Renders a search form with a text input field and a submit button.
-    - When the form is submitted, Searchbox calls `onSearch` passing the search term.
-  - props:
-    - onSearch: Function
-  - state:
-    - *no state*
+- Behavior:
+  - Topmost component that holds all state and renders the main components
+- props:
+  - *no props*
+- state:
+  - searchTerm: String
+  - photos: Array&lt;Object>
+  - currentPhoto: Object
 
-- PhotoList
-  - Behavior:
-    - Renders the search results as a list of PhotoItem components.
-  - props:
-    - searchTerm: String
-    - photos: Array<Object>
-    - onFocusPhoto: Function
-  - state:
-    - *no state*
+### Searchbox
 
-- PhotoItem
-  - Behavior:
-    - Renders a clickable photo thumbnail.
-    - If the user clicks on a photo in the results, PhotoList calls `onFocusPhoto` passing the photo object.
-  - props:
-    - photos: Array<Object>
-    - onFocusPhoto: Function
-  - state:
-    - *no state*
+- Behavior:
+  - Renders a search form with a text input field and a submit button.
+  - When the form is submitted, Searchbox calls `onSearch` passing the search term.
+- props:
+  - onSearch: Function
+- state:
+  - *no state*
 
-- FullPhoto
-  - Behavior:
-    - Renders a photo, its metadata and links to the original Flickr page.
-  - props:
-    - photo: Object
-  - state:
-    - *no state*
+### PhotoList
+
+- Behavior:
+  - Renders the search results as a list of PhotoItem components.
+- props:
+  - searchTerm: String
+  - photos: Array&lt;Object>
+  - onFocusPhoto: Function
+- state:
+  - *no state*
+
+### PhotoItem
+
+- Behavior:
+  - Renders a clickable photo thumbnail.
+  - If the user clicks on a photo in the results, PhotoList calls `onFocusPhoto` passing the photo object.
+- props:
+  - photos: Array&lt;Object>
+  - onFocusPhoto: Function
+- state:
+  - *no state*
+
+### FullPhoto
+
+- Behavior:
+  - Renders a photo, its metadata and links to the original Flickr page.
+- props:
+  - photo: Object
+- state:
+  - *no state*
 
 ## Possible data changes
 
-- onSearch > SEARCH
-- Flickr search callback > SEARCH_RESULTS_LOADED
-- onFocusPhoto > PHOTO_FOCUSSED
+- onSearch > `SEARCH`
+- Flickr search callback > `SEARCH_RESULTS_LOADED`
+- onFocusPhoto > `PHOTO_FOCUSSED`
 
-## Implications of this structure
+## Advantages of this structure
 
 1. All possible UI states are known
 2. The application data is specified
