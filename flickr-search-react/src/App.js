@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import $ from 'jquery';
 import Searchbox from './Searchbox';
 import PhotoList from './PhotoList';
 import FullPhoto from './FullPhoto';
 import './App.css';
 
-class App extends Component {
+class App extends PureComponent {
 
   constructor(props) {
     super(props);
