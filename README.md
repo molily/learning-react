@@ -7,3 +7,4 @@
 5. Complex UI: Solve this Flickr search example in React:
   - [jQuery solution](http://molily.de/javascript-introduction/flickr-jquery.html)
   - [Backbone solution](http://molily.de/javascript-introduction/flickr-backbone.html)
+
