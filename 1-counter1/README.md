@@ -1,3 +1,3 @@
 # Counter 1
 
-Counter component with + and - buttons with a state: `count`
+Implement a reusable Counter component with + (increase) and - (decrease) buttons with a state: `count`.
