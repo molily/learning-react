@@ -1,5 +1,12 @@
 # Flickr Search with React
 
+Implement this UI in React:
+
+- [Flickr Search – jQuery implementation](http://molily.de/javascript-introduction/flickr-jquery.html)
+- [Flickr Search – Backbone implementation](http://molily.de/javascript-introduction/flickr-backbone.html)
+
+## Planning
+
 Before writing any code, we should plan how to structure our app.
 
 - How does the UI work? What are the possible UI states? What are the possible state transitions?
