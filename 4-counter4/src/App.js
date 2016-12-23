@@ -45,6 +45,7 @@ export default class App extends PureComponent {
     );
     return (
       <div className="App">
+        <h1>Counter 4: Stateless counters, all state in App</h1>
         {counters}
       </div>
     );
