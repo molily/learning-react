@@ -2,6 +2,7 @@ import React, { PureComponent, PropTypes } from 'react';
 
 export default class Counter extends PureComponent {
 
+  // Performance optimization:
   // Implement a custom shouldComponentUpdate function. With each render of
   // the parent component, Counter gets new on* callback functions.
   // This would lead to a re-render even if the count did not change.

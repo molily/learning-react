@@ -2,12 +2,12 @@ import React, { PureComponent } from 'react';
 import Counter from './Counter';
 import './App.css';
 
+const initialCounts = [ 0, 10, 20, 30, 40 ];
+
 export default class App extends PureComponent {
 
   constructor(props) {
     super(props);
-    const initialCounts = [ 0, 10, 20, 30, 40 ];
-    this.initialCounts = initialCounts;
     this.state = {
       counts: initialCounts
     };
@@ -31,7 +31,7 @@ export default class App extends PureComponent {
   }
 
   handleReset(index) {
-    this.changeCount(index, this.initialCounts[index]);
+    this.changeCount(index, initialCounts[index]);
   }
 
   render() {

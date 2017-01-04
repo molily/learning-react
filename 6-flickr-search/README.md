@@ -14,15 +14,9 @@ Before writing any code, we should plan how to structure our app.
 - How to break down the app into small UI components?
 - Which components do we need? What is their purpose? What data do they expect? What is their behavior / interactivity?
 
-## Component structure
-
-- App
-  - Searchbox
-  - PhotoList
-    - PhotoItem
-  - FullPhoto
-
 ## Application data
+
+What is the data the application deals with?
 
 - searchTerm: String (may be empty, i.e. `''`)
 - photos: Array&lt;Object> (may be empty, i.e. `[]`)
@@ -30,27 +24,41 @@ Before writing any code, we should plan how to structure our app.
 
 ## Possible application states
 
-- State 1: Initial state
+Now that we have identified the application-wide data, what are the possible UI states and how does the data look then?
+
+- State 1: Initial state. Empty form, no photos, no current photo
   - searchTerm: ''
   - photos: []
   - currentPhoto: null
 
-- State 2.1: Search term entered, search request pending
+- State 2: Search term entered, search request pending
   - searchTerm: 'flower'
   - photos: []
   - currentPhoto: null
 
-- State 2.2: Search request succeeded, showing the results
+- State 3: Search request succeeded, showing the results
   - searchTerm: 'flower'
-  - photos: [ {}, {} … ]
+  - photos: [ {…}, {…}, … ]
   - currentPhoto: null
 
-- State 3: User clicked on a result, showing the full photo
+- State 4: User clicked on a result, showing the full photo
   - searchTerm: 'flower'
-  - photos: [ {}, {} … ]
-  - currentPhoto: {}
+  - photos: [ {…}, {…}, … ]
+  - currentPhoto: {…}
+
+## Component structure
+
+This is how the application can be composed using React component:
+
+- App
+  - Searchbox
+  - PhotoList
+    - PhotoItem
+  - FullPhoto
 
 ## Component definitions
+
+Now let’s define what these components do, which props they expect and which state they manage.
 
 ### App
 
@@ -106,9 +114,13 @@ Before writing any code, we should plan how to structure our app.
 
 ## Possible data changes
 
-- onSearch > `SEARCH`
-- Flickr search callback > `SEARCH_RESULTS_LOADED`
-- onFocusPhoto > `PHOTO_FOCUSSED`
+Which are the ways the application data can change? Let’s give them a name.
+
+- When `onSearch` is called, `SEARCH` happens.
+- When the Flickr search succeeds, `SEARCH_RESULTS_LOADED` happens.
+- When `onFocusPhoto` is called, `PHOTO_FOCUSSED` happens.
+
+This helps us to understand the user actions that lead to a data change and UI state change. It will also help to refactor the app using Redux in the next exercise.
 
 ## Advantages of this structure
 
