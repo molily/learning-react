@@ -26,7 +26,7 @@ What is the data the application deals with?
 
 Now that we have identified the application-wide data, what are the possible UI states and how does the data look then?
 
-- State 1: Initial state. Empty form, no photos, no current photo
+- State 1: Initial state. Empty form, no search results, no full photo
   - searchTerm: ''
   - photos: []
   - currentPhoto: null
@@ -36,12 +36,12 @@ Now that we have identified the application-wide data, what are the possible UI 
   - photos: []
   - currentPhoto: null
 
-- State 3: Search request succeeded, showing the results
+- State 3: Search request succeeded, showing the search results
   - searchTerm: 'flower'
   - photos: [ {…}, {…}, … ]
   - currentPhoto: null
 
-- State 4: User clicked on a result, showing the full photo
+- State 4: User clicked on a search result, showing the full photo
   - searchTerm: 'flower'
   - photos: [ {…}, {…}, … ]
   - currentPhoto: {…}
