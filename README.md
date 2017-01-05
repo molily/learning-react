@@ -1,6 +1,6 @@
-# Workshop tasks for learning React and Redux
+# Workshop exercises for learning React and Redux
 
-These examples are practical task for an introduction workshop to React and Redux. They are based on [create-react-app](https://github.com/facebookincubator/create-react-app).
+These are practical exercises for an introduction workshop to React and Redux. They are based on [create-react-app](https://github.com/facebookincubator/create-react-app).
 
 ## Topics covered
 
@@ -17,12 +17,12 @@ These examples are practical task for an introduction workshop to React and Redu
 - Connected components, actions, action creators, reducers
 - Rewrite the previous React examples using Redux
 
-## The tasks
+## The exercises
 
 1. Counter component with + and - buttons with a state: `count`
 2. Same counter with a reset button
 3. Same counter with prop: `initialCount`
 4. A counter without state, only props: `count`, `onIncrease`, `onDecrease`, `onReset`. The state for all counters is saved in the parent component (`App`).
-5. The state for all counters is saved in a Redux store and is changed using action creators and a reducer.
-6. Flickr search: Implement a complex UI in React
+5. Flickr search: Implement a complex UI in React
+6. Like Counter exercise 4, but he state for all counters is saved in a Redux store and is changed using action creators and a reducer.
 7. Flickr search with React and Redux
