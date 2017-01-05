@@ -16,7 +16,7 @@ export default class App extends PureComponent {
     );
     return (
       <div className="App">
-        <h1>Counter 5: State managed by Redux</h1>
+        <h1>Counter 4: State managed by Redux</h1>
         {counters}
       </div>
     );

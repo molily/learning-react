@@ -24,5 +24,5 @@ These are practical exercises for an introduction workshop to React and Redux. T
 3. Same counter with prop: `initialCount`
 4. A counter without state, only props: `count`, `onIncrease`, `onDecrease`, `onReset`. The state for all counters is saved in the parent component (`App`).
 5. Flickr search: Implement a complex UI in React
-6. Like Counter exercise 4, but he state for all counters is saved in a Redux store and is changed using action creators and a reducer.
+6. Like Counter 4, but the state for all counters is managed by Redux.
 7. Flickr search with React and Redux

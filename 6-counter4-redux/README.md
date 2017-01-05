@@ -1,4 +1,4 @@
-# Counter 5
+# Counter 4: State managed by Redux
 
 Change counter 4 so that the state and all state changes are managed by [Redux](https://github.com/reactjs/redux). The App is connected to the Redux store using [react-redux](https://github.com/reactjs/react-redux).
 
