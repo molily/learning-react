@@ -26,3 +26,24 @@ These are practical exercises for an introduction workshop to React and Redux. T
 5. Flickr search: Implement a complex UI in React
 6. Like Counter 4, but the state for all counters is managed by Redux.
 7. Flickr search with React and Redux
+
+## Getting started
+
+### Running the reference implementations
+
+1. Open the console
+2. Clone this repository with `git clone https://github.com/molily/learning-react.git`
+3. On the console, change into one of the subdirectories of `learning-react`
+4. Run `npm start`
+5. Open [http://localhost:3000/](http://localhost:3000/) in the browser
+
+### Creating a development environment
+
+Before you start working on the exercises, we create a workspace with the React starter kit `create-react-app`.
+
+1. On the console, run these commands:
+   `npm install -g create-react-app`
+2. `create-react-app my-react-app` (`my-react-app` is a folder name that you can choose freely)
+3. `cd my-react-app`
+4. `npm start`
+5. Open [http://localhost:3000/](http://localhost:3000/) in the browser
