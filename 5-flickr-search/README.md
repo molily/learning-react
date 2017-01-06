@@ -98,7 +98,7 @@ Now let’s define what these components do, which props they expect and which s
   - Renders a clickable photo thumbnail.
   - If the user clicks on the photo, PhotoItem calls `onFocusPhoto` passing the photo object.
 - props:
-  - photos: Array&lt;Object>
+  - photo: Object
   - onFocusPhoto: Function
 - state:
   - *no state*
