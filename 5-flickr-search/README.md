@@ -51,7 +51,7 @@ Now that we have identified the application-wide data, what are the possible UI 
 This is how the application can be composed using React component:
 
 - App
-  - Searchbox
+  - SearchForm
   - PhotoList
     - PhotoItem
   - FullPhoto
@@ -71,11 +71,11 @@ Now let’s define what these components do, which props they expect and which s
   - photos: Array&lt;Object>
   - currentPhoto: Object
 
-### Searchbox
+### SearchForm
 
 - Behavior:
   - Renders a search form with a text input field and a submit button.
-  - When the form is submitted, Searchbox calls `onSearch` passing the search term.
+  - When the form is submitted, SearchForm calls `onSearch` passing the search term.
 - props:
   - onSearch: Function
 - state:
@@ -84,9 +84,9 @@ Now let’s define what these components do, which props they expect and which s
 ### PhotoList
 
 - Behavior:
-  - Renders the search results as a list of PhotoItem components.
+  - Renders a list of PhotoItem components.
 - props:
-  - searchTerm: String
+  - title: String (we’re passing the search term)
   - photos: Array&lt;Object>
   - onFocusPhoto: Function
 - state:
@@ -96,7 +96,7 @@ Now let’s define what these components do, which props they expect and which s
 
 - Behavior:
   - Renders a clickable photo thumbnail.
-  - If the user clicks on a photo in the results, PhotoList calls `onFocusPhoto` passing the photo object.
+  - If the user clicks on the photo, PhotoItem calls `onFocusPhoto` passing the photo object.
 - props:
   - photos: Array&lt;Object>
   - onFocusPhoto: Function

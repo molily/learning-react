@@ -1,6 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react';
 
-export default class Searchbox extends PureComponent {
+export default class SearchForm extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -26,6 +26,6 @@ export default class Searchbox extends PureComponent {
   }
 }
 
-Searchbox.propTypes = {
+SearchForm.propTypes = {
   onSearch: PropTypes.func.isRequired
 };

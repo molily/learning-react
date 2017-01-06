@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import jsonp from 'jsonp';
-import Searchbox from './Searchbox';
+import SearchForm from './SearchForm';
 import PhotoList from './PhotoList';
 import FullPhoto from './FullPhoto';
 import './App.css';
@@ -40,14 +40,14 @@ export default class App extends PureComponent {
     const { searchTerm, photos, currentPhoto } = this.state;
 
     const photoList = photos.length > 0 &&
-      <PhotoList searchTerm={searchTerm} photos={photos}
+      <PhotoList title={searchTerm} photos={photos}
         onFocusPhoto={this.onFocusPhoto} />;
     const fullPhoto = currentPhoto && <FullPhoto photo={currentPhoto} />;
 
     return (
       <main className="App">
         <header className="App-searchbox">
-          <Searchbox onSearch={this.onSearch} />
+          <SearchForm onSearch={this.onSearch} />
         </header>
         <section className="App-photolist">
           {photoList}
