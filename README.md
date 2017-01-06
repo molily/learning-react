@@ -39,7 +39,7 @@ These are practical exercises for an introduction workshop to React and Redux. T
 
 ### Creating a development environment
 
-Before you start working on the exercises, we create a workspace with the React starter kit `create-react-app`.
+In order to implement the exercises, we create a workspace with the React starter kit `create-react-app`.
 
 1. On the console, run these commands:
    `npm install -g create-react-app`
@@ -47,3 +47,5 @@ Before you start working on the exercises, we create a workspace with the React 
 3. `cd my-react-app`
 4. `npm start`
 5. Open [http://localhost:3000/](http://localhost:3000/) in the browser
+
+The recommended approach is to start both the dev environment and the respective the reference implementation (different ports will be used automatically, like 3000 and 3001). Then you can start implementing your version. When you have questions, ask the workshop coach(es) or peak into the reference implementation.
