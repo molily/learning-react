@@ -1,15 +1,18 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 export default class SearchForm extends PureComponent {
 
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
+
+    this.inputRef = React.createRef();
   }
 
   onSubmit(event) {
     event.preventDefault();
-    this.props.onSearch(this.refs.searchField.value);
+    this.props.onSearch(this.inputRef.current.value);
   }
 
   render() {
@@ -17,7 +20,7 @@ export default class SearchForm extends PureComponent {
       <form onSubmit={this.onSubmit}>
         <h1>Flickr Search</h1>
         <p>
-          <input ref='searchField' type='text' defaultValue='Flower' />
+          <input ref={this.inputRef} type='text' defaultValue='Flower' />
           {' '}
           <button>Submit</button>
         </p>

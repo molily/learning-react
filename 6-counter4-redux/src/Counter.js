@@ -1,6 +1,7 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class Counter extends PureComponent {
+export default class Counter extends Component {
 
   // Performance optimization:
   // Implement a custom shouldComponentUpdate function. With each render of

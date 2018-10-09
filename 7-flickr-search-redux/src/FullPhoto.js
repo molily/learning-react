@@ -1,4 +1,5 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 export default class FullPhoto extends PureComponent {
 
@@ -12,7 +13,7 @@ export default class FullPhoto extends PureComponent {
         </p>
         <p>Tags: {photo.tags}</p>
         <p>
-          <a href={photo.link} target='_blank'>
+          <a href={photo.link} target='_blank' rel="noopener noreferrer">
             {photo.link}
           </a>
         </p>

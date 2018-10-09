@@ -1,4 +1,5 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import SearchForm from './SearchForm';
 import PhotoList from './PhotoList';
 import FullPhoto from './FullPhoto';

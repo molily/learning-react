@@ -1,4 +1,5 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import './PhotoItem.css';
 
 export default class PhotoItem extends PureComponent {
@@ -17,7 +18,7 @@ export default class PhotoItem extends PureComponent {
     const { photo } = this.props;
     return (
       <li className='PhotoItem'>
-        <a href='' onClick={this.onFocusPhoto}>
+        <a href={photo.link} onClick={this.onFocusPhoto}>
           <img src={photo.media.m} alt={photo.title}
             className='PhotoItem-image'/>
         </a>
