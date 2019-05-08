@@ -33,17 +33,19 @@ These are practical exercises for an introduction workshop to React and Redux. T
 
 1. Open the console
 2. Clone this repository with `git clone https://github.com/molily/learning-react.git`
-3. On the console, change into one of the subdirectories of `learning-react`
-4. Run `npm start`
-5. Open [http://localhost:3000/](http://localhost:3000/) in the browser
+3. On the console, run `cd learning-react`
+4. Change into one of the subdirectories, e.g.
+   `cd 1-counter1`
+5. Run `npm install`
+6. Run `npm start`
+7. Open [http://localhost:3000/](http://localhost:3000/) in the browser
 
 ### Creating a development environment
 
 In order to implement the exercises, we create a workspace with the React starter kit `create-react-app`.
 
 1. On the console, run these commands:
-   `npm install -g create-react-app`
-2. `create-react-app my-react-app` (`my-react-app` is a folder name that you can choose freely)
+   `npx create-react-app my-react-app` (`my-react-app` is a folder name that you can choose freely)
 3. `cd my-react-app`
 4. `npm start`
 5. Open [http://localhost:3000/](http://localhost:3000/) in the browser

@@ -46,7 +46,7 @@ export default class App extends PureComponent {
 
     return (
       <main className="App">
-        <header className="App-searchbox">
+        <header className="App-searchform">
           <SearchForm onSearch={this.onSearch} />
         </header>
         <section className="App-photolist">

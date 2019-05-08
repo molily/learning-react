@@ -20,9 +20,11 @@ const mapStateToProps = (state) => state;
 const ConnectedApp = connect(mapStateToProps, actionCreators)(App);
 
 ReactDOM.render(
-  // Provide the store to the component using React’s `context`.
-  <Provider store={store}>
-    <ConnectedApp />
-  </Provider>,
+  <React.StrictMode>
+    {/* Provide the store to the component using React’s `context`. */}
+    <Provider store={store}>
+      <ConnectedApp />
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
