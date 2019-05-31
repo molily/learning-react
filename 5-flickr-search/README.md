@@ -2,8 +2,8 @@
 
 Implement this UI in React:
 
-- [Flickr Search – jQuery implementation](http://molily.de/javascript-introduction/flickr-jquery.html)
-- [Flickr Search – Backbone implementation](http://molily.de/javascript-introduction/flickr-backbone.html)
+- [Flickr Search – jQuery implementation](https://molily.de/javascript-introduction/flickr-jquery.html)
+- [Flickr Search – Backbone implementation](https://molily.de/javascript-introduction/flickr-backbone.html)
 
 ## Planning
 
