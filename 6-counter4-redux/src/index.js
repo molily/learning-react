@@ -10,14 +10,19 @@ import './index.css';
 
 // Create the Redux store.
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, undefined, composeEnhancers(
+const initialState = undefined;
+const store = createStore(reducer, initialState, composeEnhancers(
   applyMiddleware(thunk)
 ));
 
 // Create a component that is connected to the Redux store.
 // Inject the Redux state and the action creators into the props of App.
 const mapStateToProps = (state) => state;
-const ConnectedApp = connect(mapStateToProps, actionCreators)(App);
+const ConnectedApp =
+  connect(
+    mapStateToProps,
+    actionCreators
+  )(App);
 
 ReactDOM.render(
   <React.StrictMode>

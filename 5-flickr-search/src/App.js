@@ -42,7 +42,8 @@ export default class App extends PureComponent {
     const photoList = photos.length > 0 &&
       <PhotoList title={searchTerm} photos={photos}
         onFocusPhoto={this.onFocusPhoto} />;
-    const fullPhoto = currentPhoto && <FullPhoto photo={currentPhoto} />;
+    const fullPhoto = currentPhoto &&
+      <FullPhoto photo={currentPhoto} />;
 
     return (
       <main className="App">

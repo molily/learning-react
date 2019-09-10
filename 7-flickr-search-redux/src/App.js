@@ -7,32 +7,18 @@ import './App.css';
 
 export default class App extends PureComponent {
 
-  constructor(props) {
-    super(props);
-    this.onSearch = this.onSearch.bind(this);
-    this.onFocusPhoto = this.onFocusPhoto.bind(this);
-  }
-
-  onSearch(searchTerm) {
-    this.props.search(searchTerm);
-  }
-
-  onFocusPhoto(photo) {
-    this.props.focusPhoto(photo);
-  }
-
   render() {
-    const { searchTerm, photos, currentPhoto } = this.props;
+    const { searchTerm, photos, currentPhoto, search, focusPhoto } = this.props;
 
     const photoList = photos.length > 0 &&
-      <PhotoList title={searchTerm} photos={photos}
-        onFocusPhoto={this.onFocusPhoto} />;
-    const fullPhoto = currentPhoto && <FullPhoto photo={currentPhoto} />;
+      <PhotoList title={searchTerm} photos={photos} onFocusPhoto={focusPhoto} />;
+    const fullPhoto = currentPhoto &&
+      <FullPhoto photo={currentPhoto} />;
 
     return (
       <main className="App">
         <header className="App-searchform">
-          <SearchForm onSearch={this.onSearch} />
+          <SearchForm onSearch={search} />
         </header>
         <section className="App-photolist">
           {photoList}
