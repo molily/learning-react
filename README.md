@@ -36,8 +36,8 @@ These are practical exercises for an introduction workshop to React and Redux. T
 3. On the console, run `cd learning-react`
 4. Change into one of the subdirectories, e.g.
    `cd 1-counter1`
-5. Run `npm install`
-6. Run `npm start`
+5. Run `yarn install`
+6. Run `yarn start`
 7. Open [http://localhost:3000/](http://localhost:3000/) in the browser
 
 ### Creating a development environment
@@ -45,9 +45,9 @@ These are practical exercises for an introduction workshop to React and Redux. T
 In order to implement the exercises, we create a workspace with the React starter kit `create-react-app`.
 
 1. On the console, run these commands:
-   `npx create-react-app my-react-app` (`my-react-app` is a folder name that you can choose freely)
+   `yarn create react-app my-react-app` (`my-react-app` is a folder name that you can choose freely)
 3. `cd my-react-app`
-4. `npm start`
+4. `yarn start`
 5. Open [http://localhost:3000/](http://localhost:3000/) in the browser
 
 The recommended approach is to start both the dev environment and the respective the reference implementation (different ports will be used automatically, like 3000 and 3001). Then you can start implementing your version. When you have questions, ask the workshop coach(es) or peak into the reference implementation.

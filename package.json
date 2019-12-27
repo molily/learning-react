@@ -1,0 +1,14 @@
+{
+  "name": "learning-react",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "1-counter1",
+    "2-counter2",
+    "3-counter3",
+    "4-counter4",
+    "5-flickr-search",
+    "6-counter4-redux",
+    "7-flickr-search-redux"
+  ]
+}
