@@ -11,7 +11,7 @@ const changeCount = (state, index, count) => {
   return { counts };
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   const index = action.payload;
   const { counts } = state;
 
@@ -29,3 +29,5 @@ export default (state = initialState, action) => {
 
   return state;
 };
+
+export default reducer;

@@ -1,4 +1,4 @@
-import * as actionTypes from './actionTypes';
+import { PHOTO_FOCUSSED, SEARCH, SEARCH_RESULTS_LOADED }from './actionTypes';
 
 const initialState = {
   searchTerm: '',
@@ -6,21 +6,21 @@ const initialState = {
   currentPhoto: null
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
 
-  if (action.type === actionTypes.SEARCH) {
+  if (action.type === SEARCH) {
     return Object.assign({}, initialState, {
       searchTerm: action.payload
     });
   }
 
-  if (action.type === actionTypes.SEARCH_RESULTS_LOADED) {
+  if (action.type === SEARCH_RESULTS_LOADED) {
     return Object.assign({}, state, {
       photos: action.payload
     });
   }
 
-  if (action.type === actionTypes.PHOTO_FOCUSSED) {
+  if (action.type === PHOTO_FOCUSSED) {
     return Object.assign({}, state, {
       currentPhoto: action.payload
     });
@@ -28,3 +28,5 @@ export default (state = initialState, action) => {
 
   return state;
 };
+
+export default reducer;
