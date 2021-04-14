@@ -1,9 +1,12 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import SearchForm from './SearchForm';
-import PhotoList from './PhotoList';
-import FullPhoto from './FullPhoto';
 import './App.css';
+
+import React, { PureComponent } from 'react';
+
+import PropTypes from 'prop-types';
+
+import FullPhoto from './FullPhoto';
+import PhotoList from './PhotoList';
+import SearchForm from './SearchForm';
 
 export default class App extends PureComponent {
 
@@ -26,6 +29,13 @@ export default class App extends PureComponent {
         <section className="App-fullphoto">
           {fullPhoto}
         </section>
+        <footer class="App-footer">
+          <p>
+            <small>
+              This non-commercial example application uses the Flickr API but is not endorsed or certified by Flickr Inc. or SmugMug, Inc. See the <a href="https://www.flickr.com/help/terms/api">Flickr API Terms of Use</a>.
+            </small>
+          </p>
+        </footer>
       </main>
     );
   }

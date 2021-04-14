@@ -7,3 +7,7 @@
   float: left;
   width: 50%;
 }
+
+.App-footer {
+  clear: left;
+}
